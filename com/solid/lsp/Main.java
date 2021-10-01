@@ -1,6 +1,3 @@
-package com.solid.lsp;
-
-
 public class Main {
 
     private static final int width = 4;

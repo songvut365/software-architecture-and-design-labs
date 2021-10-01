@@ -1,5 +1,3 @@
-package com.solid.lsp;
-
 public class Square extends Rectangle {
 
     Square(int side) {
