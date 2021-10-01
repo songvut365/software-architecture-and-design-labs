@@ -3,6 +3,10 @@ public class Square extends Shape {
         this.setSide(side);
     }
 
+    public int getSide() {
+      return super.getWidth();
+    }
+
     public void setSide(int side) {
         super.setWidth(side);
         super.setHeight(side);
