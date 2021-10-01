@@ -31,4 +31,6 @@ class Square {
 Shape <|-- Rectangle
 Shape <|-- Square
 
+hide Square fields
+
 @enduml
