@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle extends Shape {
     // DO NOT EDIT THE FILE FROM THIS LINE ONWARD!!
     private int width;
     private int height;
