@@ -1,1 +1,1 @@
-# Lab07 - Desgin Pattern
+# Lab07 - Creational Desgin Patterns
