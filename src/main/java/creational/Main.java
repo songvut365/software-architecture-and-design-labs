@@ -29,13 +29,11 @@ public class Main {
         //JSON usage
         BookMetadataExporter jsonExporter = new JSONBookMetadataExporter();
         jsonExporter.add(TestData.sailboatBook);
-        jsonExporter.add(TestData.sailboatBook);
         jsonExporter.add(TestData.GoFBook);
         jsonExporter.export(System.out);
 
         //CSV usage
         BookMetadataExporter csvExporter = new CSVBookMetadataExporter();
-        csvExporter.add(TestData.sailboatBook);
         csvExporter.add(TestData.sailboatBook);
         csvExporter.add(TestData.GoFBook);
         csvExporter.export(System.out);
