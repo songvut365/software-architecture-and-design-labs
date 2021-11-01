@@ -5,7 +5,7 @@ import java.util.concurrent.Flow;
 public class StringSubscription implements Flow.Subscription {
     Flow.Subscriber subscriber;
     String item;
-    long counter;
+    public long counter;
 
     public StringSubscription(Flow.Subscriber subscriber) {
         this.subscriber = subscriber;
@@ -28,6 +28,8 @@ public class StringSubscription implements Flow.Subscription {
 
     public void publishItem(String str) {
         this.item = str;
+
+        //request counter
         for(int i=0; i<counter; i++) {
             subscriber.onNext(item);
         }
