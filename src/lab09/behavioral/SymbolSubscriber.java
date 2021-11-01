@@ -1,5 +1,8 @@
 package lab09.behavioral;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.concurrent.Flow;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,10 +18,15 @@ public class SymbolSubscriber extends StringSubscriber {
 
     @Override
     public void onNext(Object item) {
-        Pattern symbol = Pattern.compile("[,!@#$%&*()_+=|<>?{}\\\\[\\\\]~-]");
-        Matcher hasSymbol = symbol.matcher(item.toString());
-        if(hasSymbol.find()) {
+        //PrintString
+        try {
+            FileWriter symbolWriter = new FileWriter("symbol.txt", true);
+            symbolWriter.write(item.toString());
+            symbolWriter.close();
             System.out.println("Symbol subscriber: " + item);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
