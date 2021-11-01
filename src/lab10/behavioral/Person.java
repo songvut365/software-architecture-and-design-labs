@@ -1,4 +1,4 @@
-package edu.parinya.softarchdesign.behavior2;
+package lab10.behavioral;
 
 // DO NOT MODIFY ANYTHING BELOW THIS LINE!!
 public class Person {
