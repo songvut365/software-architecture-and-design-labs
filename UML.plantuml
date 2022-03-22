@@ -1,0 +1,36 @@
+@startuml LSP
+skinparam ClassAttributeIconSize 0
+
+abstract class Shape {
+  -width: int
+  -height: int
+
+  +getWidth(): int
+  +setWidth(widtht: int): void
+  +getHeight(): int
+  +setHeight(height: int): void
+  +getArea(): int
+}
+
+class Rectangle {
+  -width: int
+  -height: int
+
+  +getWidth(): int
+  +setWidth(widtht: int): void
+  +getHeight(): int
+  +setHeight(height: int): void
+  +getArea(): int
+}
+
+class Square {
+  +getSide(): int
+  +setSide(side: int): void
+}
+
+Shape <|-- Rectangle
+Shape <|-- Square
+
+hide Square fields
+
+@enduml
