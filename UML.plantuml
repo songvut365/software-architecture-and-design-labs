@@ -1,0 +1,38 @@
+@startuml Book
+skinparam ClassAttributeIconSize 0
+
+class Book {
+  -title: String
+  -pages: List<String>
+  -iterator: ListInterator<String>
+  -currentPage: String
+
+  +Book()
+  +getTitle(): String
+  +getCurrentPage(): String
+  +turnToNextPage(): boolean
+}
+
+class FilePrinter {
+  +printerToFile(): void
+}
+
+class ScreenPrinter {
+  +printToScreen(): void
+}
+
+class BookPublisher
+
+class BookReader
+
+Book <-- FilePrinter
+Book <-- ScreenPrinter
+FilePrinter <.. BookPublisher
+ScreenPrinter <.. BookReader 
+
+hide FilePrinter fields
+hide ScreenPrinter fields
+hide BookPublisher members
+hide BookReader members
+
+@enduml
